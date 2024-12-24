@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .form-content {
+    @apply container flex flex-row max-md:flex-col gap-5  max-md:gap-6
+    mt-6 mx-7 max-lg:mx-0;
+  }
+}
+
+.item-info {
+  @apply flex flex-col basis-[40%] items-start justify-start gap-8;
+}
+
+.content-item .label {
+  @apply w-[70px];
+}
+
+.item-content {
+  @apply flex flex-col basis-[calc(100%_-_40%_-_40px)] gap-8;
+}
+
+@layer utilities {
+  .form-group {
+    @apply flex flex-col relative;
+  }
+}
+@layer utilities {
+  .form-group label {
+    @apply absolute text-sm  bg-[transparent] px-1 left-3
+    duration-300 z-10 transform -translate-y-[11px] bg-color_white dark:bg-color_black rounded-sm;
+  }
+}
+
+@layer utilities {
+  .form-group .input-item {
+    @apply block w-full px-4 py-2  
+    border border-border_gray rounded-lg 
+    bg-color_white dark:bg-color_black
+    appearance-none 
+    focus:outline-none 
+    focus:border-border_gray_focus dark:focus:border-border_input;
+  }
+}
+
+@layer utilities {
+  .form-group input {
+    @apply h-[50px];
+  }
+}
+
+@layer utilities {
+  .form-group textarea {
+    @apply max-h-[200px] min-h-[100px] bg-color_white dark:bg-border_gray rounded-lg px-2;
+  }
+}
+
+@layer utilities {
+  .wrapper-button {
+    @apply h-[50px]  w-full flex items-center justify-end my-4;
+  }
+  .wrapper-button > button {
+    @apply h-[100%] w-[100px];
+  }
+}

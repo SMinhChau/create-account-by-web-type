@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .contact-information {
+    @apply w-full flex flex-col gap-2;
+  }
+  .content-item {
+    @apply flex flex-row w-full;
+  }
+  .content-item .contact-label {
+    @apply text-wrap w-[100px] capitalize;
+  }
+  .content-item .contact-value {
+    @apply text-wrap break-all  truncate w-[calc(100%_-_100px)];
+  }
+
+  .content-item .contact-value .email {
+    @apply lowercase;
+  }
+}

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapper {
+    @apply flex items-center justify-center gap-2 relative;
+  }
+}
+
+@layer utilities {
+  .content {
+    @apply items-center justify-center w-auto
+  
+     border-mobile_border_gray rounded-xl;
+  }
+}

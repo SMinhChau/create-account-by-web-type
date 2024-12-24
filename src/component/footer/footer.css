@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-content {
+  @apply container min-h-[100px] w-full text-title flex flex-col items-center justify-center gap-2  border-solid border-t-2;
+  border-image: linear-gradient(to right, #507872, #194633, #232224) 1;
+  animation: border-pulse 2s infinite;
+}
+
+@keyframes border-pulse {
+  0% {
+    border-image-slice: 1;
+  }
+  50% {
+    border-image-slice: 3;
+  }
+  100% {
+    border-image-slice: 1;
+  }
+}
+
+.group-icon {
+  @apply min-h-[40px] py-[5px] flex row-auto items-center justify-center p-[5px] gap-1;
+}
+.group-icon .icon-footer {
+  @apply min-w-6 w-5 h-5 text-['#123544'] cursor-pointer hover:text-title_hover hover:w-6 hover:h-6;
+}

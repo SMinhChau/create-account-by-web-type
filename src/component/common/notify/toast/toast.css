@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .button-close {
+    @apply w-6 h-6 p-3 relative flex items-center justify-center;
+  }
+}
+
+@layer utilities {
+  .button-close img {
+    @apply w-3 h-3 absolute;
+  }
+}

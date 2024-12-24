@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: auto;
+  box-sizing: border-box;
+  margin: 0;
+  @apply bg-[#ffffff] text-[#737373];
+}
+
+.dark body {
+  @apply bg-[#000000] text-[#a1a1aa];
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@layer base {
+  .submit-button {
+    @apply rounded-lg
+    border-[1px] border-solid border-blue_border dark:border-border_gray  hover:border-border_gray
+    duration-700 shadow-sm hover:shadow-lg shadow-[#082f49]  
+    dark:hover:border-[#0f766e] hover:shadow-bg_card_hover dark:hover:shadow-[#5eead4];
+  }
+}
+
+@layer base {
+  .scroll-y {
+    overflow-y: auto;
+  }
+  .scroll-y::-webkit-scrollbar {
+    @apply w-[6px] rounded-lg;
+  }
+  .scroll-y::-webkit-scrollbar-track {
+    @apply rounded-lg mt-[6px];
+  }
+  .scroll-y::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-border_gray dark:bg-blue_border;
+  }
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .center-box {
+    @apply container flex items-center justify-center w-full;
+  }
+  .wrapper-logo {
+    @apply relative;
+  }
+  .wrapper-logo a,
+  .wrapper-logo .logo {
+    @apply absolute w-[60px] h-[60px] max-md:w-[36px] max-md:h-[36px];
+  }
+  .menu-list .item-selected {
+    @apply underline hover:decoration-title_hover dark:hover:decoration-title_hover decoration-blue_border dark:decoration-blue_border_dark decoration-2 underline-offset-4;
+  }
+}
+
+@layer components {
+  .icon-menu svg {
+    @apply w-6 h-6 text-blue_border cursor-pointer hover:text-title_hover;
+  }
+
+  .menu-item {
+    @apply text-title font-semibold hover:text-title_hover;
+  }
+}

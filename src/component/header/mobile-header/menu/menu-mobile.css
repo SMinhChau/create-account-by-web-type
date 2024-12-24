@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nar-mobile {
+    @apply w-full right-0 h-[calc(100vh_-_68px)] bg-bg_content_mobile dark:bg-bg_content_mobile_dark fixed z-[100] top-[68px]
+    animate-slide-down delay-100  duration-100 overflow-hidden lg:hidden;
+  }
+}
+
+@layer utilities {
+  .content {
+    @apply p-5 w-full h-full relative;
+  }
+  .close-icon {
+    @apply absolute right-4 w-6 h-6;
+  }
+  .close-icon svg {
+    @apply w-full h-full;
+  }
+}
+
+@layer utilities {
+  .menus {
+    @apply flex flex-col gap-3 items-start mt-6;
+  }
+  .item-menu {
+    @apply flex gap-3 items-center py-2;
+  }
+  .item-menu .item-title {
+    @apply text-xl;
+  }
+  .item-menu .item-selected {
+    @apply underline decoration-[#022c22] dark:decoration-[#6b7280] decoration-2 underline-offset-4;
+  }
+  .item-menu > .icon svg {
+    @apply w-6 h-6;
+  }
+}

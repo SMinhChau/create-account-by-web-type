@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .card-list {
+    @apply flex cursor-pointer
+        flex-col gap-[24px] 
+        border-[1px] border-solid border-border_gray
+        dark:hover:border-[#0f766e] 
+        rounded-[20px] p-4 pb-[16px]
+        duration-150 
+        shadow-sm dark:shadow-[#082f49] 
+        hover:shadow-blue_border  dark:hover:shadow-[#5eead4] 
+        w-[100%] lg:w-[40%] min-h-[200px];
+  }
+  .card-time {
+    @apply text-sm italic;
+  }
+  .card-name {
+    @apply text-xl leading-[24px] font-bold uppercase;
+  }
+  .card-description {
+    @apply relative text-base indent-8 text-left whitespace-normal leading-7;
+  }
+  .icon-bottom {
+    @apply absolute bottom-[-1px] right-[-4px];
+  }
+  .icon-bottom svg {
+    @apply w-[24px] h-[24px];
+  }
+}
