@@ -51,7 +51,6 @@ const AddAccount = () => {
   };
 
   const handleCreate = (data: FormData) => {
-    console.log(' data >>', data);
     const params = {
       ...data,
     };
