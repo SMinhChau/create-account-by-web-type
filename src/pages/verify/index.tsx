@@ -46,12 +46,18 @@ const VerifyEmail = () => {
       redirectPath: `https://giaithuongngoisaoxanh.1vote.vn/xac-nhan-tai-khoan?registerStatus=1&email=${data.email}`,
     };
 
-    runSequentialCalls(params.email, params.character, +params.start, params.end);
+    runSequentialCalls(params.email, params.character || '', +params.start, params.end);
   };
 
   // Hàm để gọi API
   async function callApi(emailUser: string, str: string, emailIndex: number) {
-    const email = `${emailUser}+${str}${emailIndex}@gmail.com`;
+    let email = '';
+
+    if (str != '') {
+      email = `${emailUser}+${str}${emailIndex}@gmail.com`;
+    } else {
+      email = `${emailUser}+${emailIndex}@gmail.com`;
+    }
 
     const body = {
       email: email,
@@ -161,7 +167,7 @@ const VerifyEmail = () => {
                   id="character"
                   type="text"
                   placeholder="Character (ký tự)"
-                  {...register('character', { required: true })}
+                  {...register('character', { required: false })}
                 />
               </div>
 
